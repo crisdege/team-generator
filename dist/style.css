@@ -1,0 +1,40 @@
+header {
+    height: 100px;
+    width: 99%;
+    background-color: red;
+    padding: 8px;
+    text-align: center;
+    color: white;
+    size: 100px;
+}
+
+/* .flex-container {
+    display: grid;
+    column-gap: 5px;
+    justify-content: center;
+}
+
+.employee-card {
+    border: solid lightgray;
+    width: 200px;
+    margin: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    align-items: center;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.employee-name {
+    background-color: blue;
+    color: white;
+    padding: 1px;
+}
+
+tr, td {
+    border: 1px solid;
+    background-color: white;
+    padding: 5px;
+    
+} */
