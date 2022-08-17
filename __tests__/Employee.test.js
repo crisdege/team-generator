@@ -16,17 +16,21 @@ test("gets employee's name", () => {
 });
 
 test("gets employee's id", () => {
-  const testId = "12345";
-  const employee = new Employee(testId);
+  // const testId = "12345";
+  // const employee = new Employee(testId);
 
-  expect(employee.getId()).toBe(testId);
+  // expect(employee.getId()).toBe(testId);
+  const employee = new Employee("Dave", "12345", "me@me.com");
+  expect(employee.getId()).toEqual(expect.stringContaining(employee.id));
 });
 
 test("gets employee's email", () => {
-  const testEmail = "me@me.com";
-  const employee = new Employee(testEmail);
+  // const testEmail = "me@me.com";
+  // const employee = new Employee(testEmail);
 
-  expect(employee.getEmail()).toBe(testEmail);
+  // expect(employee.getEmail()).toBe(testEmail);
+  const employee = new Employee("Dave", "12345", "me@me.com");
+  expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email));
 });
 
 test("gets employee's role", () => {

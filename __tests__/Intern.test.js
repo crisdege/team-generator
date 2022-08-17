@@ -11,10 +11,12 @@ test("creates an intern object", () => {
 });
 
 test("get intern school", () => {
-  const testSchool = "school";
-  const intern = new Intern(testSchool);
+  // const testSchool = "school";
+  // const intern = new Intern(testSchool);
 
-  expect(intern.getSchool()).toBe(testSchool);
+  // expect(intern.getSchool()).toBe(testSchool);
+  const intern = new Intern("Jared", "12345", "me@me.com", "school");
+  expect(intern.getSchool()).toEqual(expect.stringContaining(intern.school));
 });
 
 test("get intern role", () => {

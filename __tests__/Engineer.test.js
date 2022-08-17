@@ -11,11 +11,16 @@ test("creates an engineer object", () => {
 });
 
 test("gets engineer's git hub user id", () => {
-  const testGithub = "jared";
-  const engineer = new Engineer(testGithub);
+  // const testGithub = "jared";
+  // const engineer = new Engineer(testGithub);
 
-  expect(engineer.getGithub()).toBe(testGithub);
+  // expect(engineer.getGithub()).toBe(testGithub);
+  const engineer = new Engineer("Jared", "12345", "me@me.com", "jared");
+  expect(engineer.getGithub()).toEqual(
+    expect.stringContaining(engineer.github)
+  );
 });
+
 test("gets engineer's role", () => {
   const testRole = "Engineer";
   const engineer = new Engineer(testRole);
