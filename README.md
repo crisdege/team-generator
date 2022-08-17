@@ -10,7 +10,7 @@ https://drive.google.com/file/d/1Pc_axqmLlKuOnC2Xmuh1wq8r8ep7GmoQ/view
 
 # Sample HTML file generated using the application
 
-![Sample HTML file](./dist/index.html)
+https://github.com/crisdege/team-generator-challenge/blob/main/dist/index.html
 
 # URL of the GitHub repository
 
