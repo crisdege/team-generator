@@ -1,36 +1,48 @@
 const inquirer = require("inquirer");
+const fs = require("fs");
+
 const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
-const Questions = require("./utils/Questions");
+
 const { writeFile, copyFile } = require("./utils/generate-site");
+
 const generatePage = require("./src/page-template");
 
-function Team() {
-  this.employee = [];
-}
+const teamArray = [];
 
-Team.prototype.initializeTeam = function () {
-  promptManager()
-    .then(({ name }) => {
-      this.employee = new Manager(name);
-    })
-    .then(promptTeam)
-    .then((teamData) => {
-      return generatePage(teamData);
-    })
-    .then((pageHTML) => {
-      return writeFile(pageHTML);
-    })
-    .then((writeFileResponse) => {
-      console.log(writeFileResponse);
-      return copyFile();
-    })
-    .then((copyFileResponse) => {
-      console.log(copyFileResponse);
-    })
-    .catch((err) => {
-      console.log(err);
+const promptManager = () => {
+  return inquirer
+    .prompt([
+      {
+        type: "input",
+        name: "name",
+        message: "Please enter this team's manager name",
+      },
+      {
+        type: "input",
+        name: "id",
+        message: "What is the manager's ID?",
+      },
+      {
+        type: "input",
+        name: "email",
+        message: "What is the manager's email address?",
+      },
+      {
+        type: "input",
+        name: "officeNumber",
+        message: "What is the manager's office number?",
+      },
+    ])
+    .then((managerInput) => {
+      const { name, id, email, officeNumber } = managerInput;
+      const manager = new Manager(name, id, email, officeNumber);
+
+      teamArray.push(manager);
+      console.log(manager);
     });
 };
+
+promptManager();
