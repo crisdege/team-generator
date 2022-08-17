@@ -1,4 +1,4 @@
-# Team Generator
+# Team Generator Application
 
 # Description
 
@@ -6,6 +6,12 @@ This application uses node.js and object oriented programming to generate a webp
 
 # Link to walkthrough video
 
+https://drive.google.com/file/d/1Pc_axqmLlKuOnC2Xmuh1wq8r8ep7GmoQ/view
+
 # Sample HTML file generated using the application
 
+![Sample HTML file](./dist/index.html)
+
 # URL of the GitHub repository
+
+https://github.com/crisdege/team-generator-challenge
